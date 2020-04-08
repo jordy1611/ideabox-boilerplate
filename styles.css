@@ -99,6 +99,46 @@ body {
   flex-grow: 2;
   height: 55%;
 }
+/* Dustin's assignment start */
+.idea-cards {
+  flex-grow: 3;
+  padding: 40px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  grid-template-areas:
+    "header"
+    "box1"
+    "footer";
+}
+
+header {
+  /* display: flex;
+  justify-content: space-between; */
+  background: #1F1F3D;
+  height: 28px;
+}
+
+.box1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-row: span 2;
+  border: 1px solid;
+  border-color: #6E646B;
+  background: #FFFFFF;
+  height:35vh;
+  width: 35vh;
+}
+
+footer {
+  background: #5356A4;
+  height: 28px;
+}
+
+
 
 .idea-title-area, .idea-body-area {
   display: block;
