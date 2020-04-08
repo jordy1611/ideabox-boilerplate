@@ -118,6 +118,10 @@ form {
   margin-top: 5px;
 }
 
+#idea-title-text {
+  height: 3em;
+}
+
 #idea-body-text {
   height: 90px;
 }
@@ -174,10 +178,10 @@ form {
   display: flex;
   flex-wrap: wrap;
   height: 50%;
-  justify-content: space-around;
+  justify-content: flex-start;
   padding-top: 20px;
   padding-left: 25%;
-  margin: 10px 5px 10px;
+  margin: 20px 20px 10px;
 }
 
 .idea-card-individual {
@@ -187,7 +191,9 @@ form {
   border: 1px solid;
   border-color: #6E646B;
   background: #FFFFFF;
-  margin-bottom: 20px;
+  margin-left: 40px;
+  margin-right: 20px;
+  margin-bottom: 30px;
   height: 75%;
   min-width: 150px;
   max-width: 275px;
