@@ -38,6 +38,9 @@ Polishing / refactoring / mentor feedback: Wednesday
 ### Iteration 0 - Desktop Layout
 Day 1: Created repo, Github Project planner, Slack channel. Planned out HTML, CSS, JS using hand-drawn wireframes, identified/ labeled appropriate elements. Updated READMe to feature contact info, project overview, timeline. Added svg to created assets folder and created README imgs folder.
 
+Day 2 and day 3: On these two days we really spent time making our code clear and concise. We had big breakthroughs with using flex-box and really honing in and understanding the usage of correct spacing. The svg icons were a bit tricky as it was our first time really working with them. But once we started to understand the process we were able to move quickly with all the other svg icons. We worked together as a team to review each code block to make sure we were all on the same page and had the same understanding on how all the code worked as a cohesive unit to build the layout of our webpage.
+
+![screenshot of desktop layout]( https://files.slack.com/files-pri/T029P2S9M-F011QFU5R36/screen_shot_2020-04-08_at_8.45.29_pm.png)
 
 ### Iteration 1 - Mobile Layout
 

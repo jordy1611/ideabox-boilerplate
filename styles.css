@@ -10,8 +10,8 @@ html, body {
 }
 
 body {
-  display: flex;
   background: #EAEAF4;
+  display: flex;
 }
 
 
@@ -29,48 +29,48 @@ body {
 /*=== menu section ===*/
 
 .menu {
-  height: 100%;
-  width: 25%;
   background: #1F1F3D;
+  height: 100%;
   position: fixed;
+  width: 25%;
 }
 
 .menu-ideabox-header-text {
+  color: #BFBFDD;
   font-family: 'Open Sans';
   font-weight: bolder;
-  color: #BFBFDD;
   margin: 15px;
 }
 
 .filter-starred-area {
-  display: flex;
-  flex-direction: column;
   border: 1px solid #353567;
   border-left: none;
   border-right: none;
+  display: flex;
+  flex-direction: column;
 }
 
 #filter-starred-ideas {
-  padding: 15px 5px 15px;
+  color: #BFBFDD;
   font-family: 'Open Sans';
   font-size: 18px;
   font-weight: bolder;
-  color: #BFBFDD;
   margin: 15px;
+  padding: 15px 5px 15px;
 }
 
 .starred-ideas-button {
-  display: flex;
-  justify-content: center;
-  width: 90%;
-  padding: 10px 40px;
-  margin: 3px auto 30px;
   background-color: #5356A4;
   border: 2px solid #353567;
   color: #E9E9F3;
-  font-size: 20px;
+  display: flex;
   font-family: 'Open Sans';
+  font-size: 20px;
   font-weight: bold;
+  justify-content: center;
+  margin: 3px auto 30px;
+  padding: 10px 40px;
+  width: 90%;
 }
 
 .starred-ideas-button:hover {
@@ -80,8 +80,8 @@ body {
 
 .ideas {
   display: flex;
-  flex-direction: column;
   flex: 1;
+  flex-direction: column;
   width: 75%
 }
 
@@ -90,20 +90,20 @@ form {
 }
 
 .idea-form-section {
-  display: flex;
-  justify-content: center;
   background: #A9AAD2;
+  display: flex;
   font-family: "Open Sans";
+  justify-content: center;
   padding: 30px;
   padding-left: 25%;
 }
 
 .idea-title-area, .idea-body-area {
+  color: #1F1F3D;
   display: flex;
   flex-direction: column;
-  color: #1F1F3D;
-  font-weight: bold;
   font-size: 18px;
+  font-weight: bold;
   margin: 10px 0 20px;
 }
 
@@ -114,8 +114,8 @@ form {
   font-family: "Open Sans";
   font-size: 14px;
   font-weight: lighter;
-  padding: 5px;
   margin-top: 5px;
+  padding: 5px;
 }
 
 #idea-title-text {
@@ -127,17 +127,17 @@ form {
 }
 
 .save-card-button {
-  width: 100%;
-  background-color: #1F1F3D;
   border: 2px solid #5356A4;
+  background-color: #1F1F3D;
   border-radius: 4px;
   color: #E9E9F3;
   font-family: "Open Sans";
-  font-weight: bolder;
   font-size: 20px;
+  font-weight: bolder;
   justify-content: center;
-  padding: 10px;
   margin: 10px 0 10px;
+  padding: 10px;
+  width: 100%;
 }
 
 .save-card-button:hover {
@@ -146,28 +146,28 @@ form {
 }
 
 .search-bar {
-  width: 100%;
-  height: 3em;
-  display: flex;
   border: 2px solid #5356A4;
   border-radius: 4px;
+  display: flex;
+  height: 3em;
   margin-top: 10px;
+  width: 100%;
 }
 
 #search-mag-icon {
-  height: 100%;
   background-color: #1F1F3D;
-  padding: 5px;
   border-radius: 2px 0 0 2px;
+  height: 100%;
+  padding: 5px;
 }
 
 #search-ideas-text-input {
- font-family: "Open Sans";
  color: #5356A4;
- font-size: 16px;
- width: 100%;
  border: none;
+ font-family: "Open Sans";
+ font-size: 16px;
  padding-left: 5px;
+ width: 100%;
 }
 
 ::placeholder {
@@ -179,52 +179,52 @@ form {
   flex-wrap: wrap;
   height: 50%;
   justify-content: flex-start;
+  margin: 20px 20px 10px;
   padding-top: 20px;
   padding-left: 25%;
-  margin: 20px 20px 10px;
 }
 
 .idea-card-individual {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  color: #1F1F3D;
+  background: #FFFFFF;
   border: 1px solid;
   border-color: #6E646B;
-  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  font-family: "Open Sans";
+  justify-content: space-between;
+  margin-bottom: 30px;
   margin-left: 40px;
   margin-right: 20px;
-  margin-bottom: 30px;
   min-height: 200px;
   max-height: 300px;
   min-width: 150px;
   max-width: 275px;
-  font-family: "Open Sans";
-  color: #1F1F3D;
 }
 
 .card-top {
+  background: #1F1F3D;
   display: flex;
   justify-content: space-between;
-  background: #1F1F3D;
   height: 15%;
 }
 
 h3 {
+  font-size: 20px;
   font-weight: bold;
+  font-weight: bolder;
   margin-top: -10px;
   margin-bottom: -10px;
   padding-left: 10px;
-  font-size: 20px;
-  font-weight: bolder;
 }
 
 .idea-card-text {
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-top: -10px;
-  margin-bottom: -10px;
   font-size: 20px;
   font-weight: lighter;
+  margin-bottom: -10px;
+  margin-top: -10px;
+  padding-left: 10px;
+  padding-right: 10px;
   text-align: left;
 }
 
@@ -234,8 +234,8 @@ h3 {
 }
 
 .card-bottom {
-  display: flex;
   background: #5356A4;
+  display: flex;
   height: 12%;
 }
 
@@ -244,12 +244,12 @@ h3 {
 }
 
 .comment-text {
-  display: flex;
-  justify-content: space-between;
   color: #FFFFFF;
+  display: flex;
   font-family: "Open Sans";
-  font-weight: bold;
   font-size: 16px;
+  font-weight: bold;
+  justify-content: space-between;
   margin-left: 1px;
   margin-top: 5px;
 }
