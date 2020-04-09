@@ -35,14 +35,14 @@ body {
   position: fixed;
 }
 
-.header-text {
+.menu-ideabox-header-text {
   font-family: 'Open Sans';
   font-weight: bolder;
   color: #BFBFDD;
   margin: 15px;
 }
 
-.filter-box {
+.filter-starred-area {
   display: flex;
   flex-direction: column;
   border: 1px solid #353567;
@@ -50,7 +50,7 @@ body {
   border-right: none;
 }
 
-#filtered-Starred-Ideas {
+#filter-starred-ideas {
   padding: 15px 5px 15px;
   font-family: 'Open Sans';
   font-size: 18px;
@@ -85,6 +85,10 @@ body {
   width: 75%
 }
 
+form {
+  width: 50%;
+}
+
 .idea-form-section {
   display: flex;
   justify-content: center;
@@ -92,10 +96,6 @@ body {
   font-family: "Open Sans";
   padding: 30px;
   padding-left: 25%;
-}
-
-form {
-  width: 50%;
 }
 
 .idea-title-area, .idea-body-area {
@@ -194,10 +194,12 @@ form {
   margin-left: 40px;
   margin-right: 20px;
   margin-bottom: 30px;
-  height: 75%;
+  min-height: 200px;
+  max-height: 300px;
   min-width: 150px;
   max-width: 275px;
   font-family: "Open Sans";
+  color: #1F1F3D;
 }
 
 .card-top {
@@ -209,11 +211,26 @@ form {
 
 h3 {
   font-weight: bold;
-  padding-top: -5px;
+  margin-top: -10px;
+  margin-bottom: -10px;
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: bolder;
 }
 
-h3, p {
-  padding: 5px;
+.idea-card-text {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: -10px;
+  margin-bottom: -10px;
+  font-size: 20px;
+  font-weight: lighter;
+  text-align: left;
+}
+
+.red-star, .white-x {
+  height: 100%;
+  width: 15%;
 }
 
 .card-bottom {
@@ -222,22 +239,19 @@ h3, p {
   height: 12%;
 }
 
-.red-star, .white-x {
-  height: 100%;
-  width: 15%;
-}
-
 .comment-icon {
   height: 110%;
 }
 
 .comment-text {
+  display: flex;
+  justify-content: space-between;
   color: #FFFFFF;
   font-family: "Open Sans";
-  text-weight: bold;
+  font-weight: bold;
   font-size: 16px;
-  margin-left: -5px;
-  margin-top: 2px;
+  margin-left: 1px;
+  margin-top: 5px;
 }
 
 /*=== media queries ===*/
