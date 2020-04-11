@@ -4,15 +4,6 @@ The IdeaBox project provides a fluid and responsive client-side interface to rec
 
 Our team will utilize an agile workflow over two weekly sprints. We will use a complementary color palette and presentation, with a reliance on Javascript, as well as localStorage to maintain our client's ideas between sessions.
 
-## Learning Goals
-
-* Continue to improve on building responsive client-side applications with good user feedback
-* Understand how to implement client-side data persistence using `localStorage`
-* Understand what it looks like to have a separate data model (using a class) and DOM model
-* Utilize `data-*` attributes
-* Incorporate & iterate over arrays in order to filter what is being displayed
-* Craft code with clean style, using small functions that show trends toward DRYness and SRP
-
 ## Planning
 
 Deployed Pages Link: https://leighlars.github.io/ideabox-boilerplate/
@@ -25,12 +16,12 @@ Text editor: Atom
 Project management tool: Github Projects
 
 Estimated schedule:
-Iteration 0 completed: Tuesday pm
-Iteration 1 completed: Thursday pm
-Iteration 2 completed: Saturday pm
-Iteration 3 completed: Monday pm
-Iteration 4 completed: Tuesday pm
-Polishing / refactoring / mentor feedback: Wednesday
+* Iteration 0 completed: Tuesday pm
+* Iteration 1 completed: Thursday pm
+* Iteration 2 completed: Saturday pm
+* Iteration 3 completed: Monday pm
+* Iteration 4 completed: Tuesday pm
+* Polishing / refactoring / mentor feedback: Wednesday
 
 
 ## Progression
