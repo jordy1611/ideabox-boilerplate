@@ -23,8 +23,11 @@ var newCard;
 
 menuButton.addEventListener("click", toggleDropDownMenu);
 saveCardButton.addEventListener("click", savedIdeaCard);
+inputTitle.addEventListener("keyup", enableSaveButton);
+inputBody.addEventListener("keyup", enableSaveButton);
 
-saveCardButton.disabled = true;
+
+// saveCardButton.disabled = true;
 
 function toggleDropDownMenu() {
   filterStarredArea.classList.toggle("show-dropdown");
@@ -38,46 +41,65 @@ function toggleDropDownMenu() {
 }
 
 function enableSaveButton() {
-  if (inputTitle.value && inputBody.value)
+  if (inputTitle.value && inputBody.value) {
   saveCardButton.disabled = false;
-  else
+  } else {
   saveCardButton.disabled = true;
+  }
 }
 
-function makeNewCard() {
-  var newCard = new Idea(title.innerText, body.innerText);
+// function makeNewCard() {
+//   var newCard = new Idea(inputTitle.value, inputBody.value);
+//   for (var i = 0; i < savedCards.length; i++) {
+//     var card = savedCards[i];
+//     if (card.title === newCard.title && card.body === newCard.body) {
+//       return
+//     }
+//   }
+//   savedCards.push(newCard);
+// }
+
+function noDuplicateCards() {
   for (var i = 0; i < savedCards.length; i++) {
-    var card = savedCards[i];
-    if (card.title === newCard.title && card.body === newCard.body) {
-      return
+    if(savedCards[i].id === newCard.id) {
+      return false;
     }
   }
-  savedCards.push(newCard);
+  return true;
+}
+function storeCard() {
+  title.push(inputTitle.value);
+  body.push(inputBody.value);
+  if(noDuplicateCard()) {
+    savedIdeaCard.push(newCard);
+  }
 }
 
 function clearText() {
   inputTitle.value = "";
   inputBody.value = "";
+  saveCardButton.disabled = true;
 }
 
-function savedIdeaCard() {
-  makeNewCard();
+function savedIdeaCard(event) {
+  event.preventDefault();
+  storeCard();
   clearText();
-  enableSaveButton();
+  addToCardSection();
 }
 
-//  function addToCardSection() {
-  //   if(savedCards.length != 0) {
-    //     for (var i = 0; i < savedCards.length; i++) {
-      //       ideaCardSection.insertAdjacentHTML("afterbegin", `
-      //          <div class="mini-poster" data-id=${savedCards[i].id}>
-      //           <h3>${savedCards[i].title}</h3>
-      //           <p>${savedCards[i].body}</p>
-      //          </div>`);
-      //     }
-      //   }
-      // }
-      //
+function addToCardSection() {
+  if(savedCards.length != 0) {
+    for (var i = 0; i < savedCards.length; i++) {
+      ideaCardSection.insertAdjacentHTML("afterbegin", `
+      <div class="user-card" data-id=${savedCards[i].id}>
+      <h3>${savedCards[i].title}</h3>
+      <p>${savedCards[i].body}</p>
+      </div>`);
+    }
+  }
+}
+
 
 
       // function deleteCard(event) {

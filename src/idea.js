@@ -15,6 +15,9 @@ class Idea {
   updateIdea() {
   }
 }
+
+
+
 // 1. An `idea.js` file that contains an `Idea` class.
 //   * `Idea` methods must include, but are not limited to:
 //     1. `constructor`

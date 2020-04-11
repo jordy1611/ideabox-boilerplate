@@ -120,9 +120,15 @@ form {
   width: 100%;
 }
 
-.save-card-button:hover {
+.save-card-button:disabled {
   background: #5356A4;
   color: #FFFFFF;
+  cursor: not-allowed;
+}
+
+.save-card-button:hover:enabled {
+  background: #E9E9F3;
+  color: #5356A4;
 }
 
 .search-bar {
