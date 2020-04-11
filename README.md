@@ -40,19 +40,19 @@ Day 1: Created repo, Github Project planner, Slack channel. Planned out HTML, CS
 
 Day 2 and day 3: On these two days we really spent time making our code clear and concise. We had big breakthroughs with using flex-box and really honing in and understanding the usage of correct spacing. The svg icons were a bit tricky as it was our first time really working with them. But once we started to understand the process we were able to move quickly with all the other svg icons. We worked together as a team to review each code block to make sure we were all on the same page and had the same understanding on how all the code worked as a cohesive unit to build the layout of our webpage.
 
+
 ![screenshot of desktop layout]( https://files.slack.com/files-pri/T029P2S9M-F011QFU5R36/screen_shot_2020-04-08_at_8.45.29_pm.png)
 
 ### Iteration 1 - Mobile Layout
-
-Now that your Desktop Layout is in place, it's time to write some media queries so this is a responsive site.
+Friday 4/10/20, we refactored our CSS and used media queries for responsive mobile layout, which included adding JS for a drop down menu.  We also collaborated with Mod 4 student Kim McCaskill to complete this iteration.   
 
 Full mobile layout:
 
-![Mobile Layout](https://frontend.turing.io/projects/module-1/assets/ideabox-group/mobile.jpg)
+![Mobile Layout](/assets/it1-mobile-view.png)
 
 Full mobile layout with open navigation:
 
-![Mobile Layout with Dropdown](https://frontend.turing.io/projects/module-1/assets/ideabox-group/mobile-dropdown.jpg)
+![Mobile Layout with Dropdown](/assets/it1-mobile-view-drop-menu.png)
 
 ### Iteration 2 and beyond
 
