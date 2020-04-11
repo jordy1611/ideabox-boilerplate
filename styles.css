@@ -190,7 +190,7 @@ form {
   width: 15%;
 }
 
-h3, .idea-card-text {
+.idea-header-text, .idea-card-text {
   padding: 10px;
 }
 
@@ -316,7 +316,7 @@ h3, .idea-card-text {
   }
 
   .comment-text {
-    margin-top: 2%; 
+    margin-top: 2%;
   }
 
 }
