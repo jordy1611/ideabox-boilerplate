@@ -202,6 +202,10 @@ form {
 
 .idea-card-text {
   font-weight: lighter;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card-bottom {
