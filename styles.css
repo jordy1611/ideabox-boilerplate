@@ -1,22 +1,15 @@
-/*=== Reset ===*/
-
 html, body, h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
 }
 
 html, body {
-  height: 100%
+  height: 100%;
 }
 
 body {
   background: #EAEAF4;
   display: flex;
-}
-
-
-.purple-3 {
-  background: #5356A4;
 }
 
 * {
@@ -25,9 +18,6 @@ body {
   padding: 0;
 }
 
-
-/*=== menu section ===*/
-
 .menu {
   background: #1F1F3D;
   height: 100%;
@@ -35,40 +25,37 @@ body {
   width: 25%;
 }
 
+.menu-button {
+  display: none;
+}
 
-
-.menu-ideabox-header-text {
+.menu-header-text {
   color: #BFBFDD;
-  font-family: 'Open Sans';
-  font-weight: bolder;
-  margin: 15px;
+  font: bold 22px 'Open Sans';
+  margin: 20px;
 }
 
 .filter-starred-area {
-  border: 1px solid #353567;
-  border-left: none;
-  border-right: none;
+  background: #1F1F3D;
+  border: solid #353567;
+  border-width: 1px 0;
   display: flex;
   flex-direction: column;
 }
 
 #filter-starred-ideas {
   color: #BFBFDD;
-  font-family: 'Open Sans';
-  font-size: 18px;
-  font-weight: bolder;
+  font: bold 16px 'Open Sans';
   margin: 15px;
-  padding: 15px 5px 15px;
+  padding: 15px 5px;
 }
 
 .starred-ideas-button {
-  background-color: #5356A4;
+  background: #5356A4;
   border: 2px solid #353567;
   color: #E9E9F3;
   display: flex;
-  font-family: 'Open Sans';
-  font-size: 20px;
-  font-weight: bold;
+  font: bold 20px 'Open Sans';
   justify-content: center;
   margin: 3px auto 30px;
   padding: 10px 40px;
@@ -84,45 +71,37 @@ body {
   display: flex;
   flex: 1;
   flex-direction: column;
-  width: 75%
+  font-family: 'Open Sans';
+  width: 75%;
+}
 
+.idea-form-section {
+  background: #A9AAD2;
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+  padding-left: 25%;
 }
 
 form {
   width: 50%;
 }
 
-.idea-form-section {
-  background: #A9AAD2;
-  display: flex;
-  font-family: "Open Sans";
-  justify-content: center;
-  padding: 30px;
-  padding-left: 25%;
-}
-
 .idea-title-area, .idea-body-area {
   color: #1F1F3D;
   display: flex;
   flex-direction: column;
-  font-size: 18px;
-  font-weight: bold;
-  margin: 10px 0 20px;
+  font: bold 18px 'Open Sans';
+  margin: 5px 0 15px;
 }
 
 #idea-title-text, #idea-body-text {
   border: 2px solid #5356A4;
   border-radius: 4px;
   color: #1F1F3D;
-  font-family: "Open Sans";
-  font-size: 14px;
-  font-weight: lighter;
+  font: lighter 20px 'Open Sans';
   margin-top: 5px;
-  padding: 5px;
-}
-
-#idea-title-text {
-  height: 3em;
+  padding: 7px;
 }
 
 #idea-body-text {
@@ -130,13 +109,11 @@ form {
 }
 
 .save-card-button {
-  border: 2px solid #5356A4;
   background-color: #1F1F3D;
+  border: 2px solid #5356A4;
   border-radius: 4px;
   color: #E9E9F3;
-  font-family: "Open Sans";
-  font-size: 20px;
-  font-weight: bolder;
+  font: bold 20px 'Open Sans';
   justify-content: center;
   margin: 10px 0 10px;
   padding: 10px;
@@ -152,8 +129,8 @@ form {
   border: 2px solid #5356A4;
   border-radius: 4px;
   display: flex;
-  height: 3em;
-  margin-top: 10px;
+  height: 50px;
+  margin: 10px 0;
   width: 100%;
 }
 
@@ -165,11 +142,10 @@ form {
 }
 
 #search-ideas-text-input {
- color: #5356A4;
  border: none;
- font-family: "Open Sans";
- font-size: 16px;
- padding-left: 5px;
+ color: #1F1F3D;
+ font: 18px 'Open Sans';
+ padding-left: 7px;
  width: 100%;
 }
 
@@ -182,53 +158,31 @@ form {
   flex-wrap: wrap;
   height: 50%;
   justify-content: flex-start;
-  margin: 20px 20px 10px;
-  padding-top: 20px;
+  margin: 10px 20px;
+  padding-top: 1%;
   padding-left: 25%;
 }
 
 .idea-card-individual {
   color: #1F1F3D;
   background: #FFFFFF;
-  border: 1px solid;
-  border-color: #6E646B;
+  border: 1px solid #6E646B;
   display: flex;
   flex-direction: column;
-  font-family: "Open Sans";
+  font: 20px 'Open Sans';
   justify-content: space-between;
-  margin-bottom: 30px;
-  margin-left: 40px;
-  margin-right: 20px;
-  min-height: 200px;
+  margin: 15px 35px;
   max-height: 300px;
-  min-width: 150px;
+  min-height: 200px;
   max-width: 275px;
+  min-width: 150px;
 }
 
 .card-top {
   background: #1F1F3D;
   display: flex;
   justify-content: space-between;
-  height: 15%;
-}
-
-h3 {
-  font-size: 20px;
-  font-weight: bold;
-  font-weight: bolder;
-  margin-top: -10px;
-  margin-bottom: -10px;
-  padding-left: 10px;
-}
-
-.idea-card-text {
-  font-size: 20px;
-  font-weight: lighter;
-  margin-bottom: -10px;
-  margin-top: -10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  text-align: left;
+  height: 12%;
 }
 
 .red-star, .white-x {
@@ -236,39 +190,35 @@ h3 {
   width: 15%;
 }
 
+h3, .idea-card-text {
+  padding: 10px;
+}
+
+.idea-card-text {
+  font-weight: lighter;
+}
+
 .card-bottom {
-  background: #5356A4;
+  background-color: #5356A4;
+  color: #FFFFFF;
   display: flex;
-  height: 12%;
+  justify-content: flex-start;
+  font: bold 16px 'Open Sans';
+  height: 13%;
 }
 
 .comment-icon {
   height: 110%;
+  width: 15%;
 }
 
 .comment-text {
-  color: #FFFFFF;
-  display: flex;
-  font-family: "Open Sans";
-  font-size: 16px;
-  font-weight: bold;
-  justify-content: space-between;
-  margin-left: 1px;
-  margin-top: 5px;
+  margin-top: 2.5%;
 }
-
-/*=== media queries ===*/
 
 @media only screen and (max-width: 400px) {
   body {
     flex-direction: column;
-
-  }
-
-  .header-text {
-    font-size: 18px;
-    padding: 10px;
-
   }
 
   .menu {
@@ -277,45 +227,69 @@ h3 {
     width: 100%;
   }
 
-  .idea-form {
-    flex-grow: 1;
+  .menu-button {
+    background-color: initial;
+    border: none;
+    display: initial;
+    height: 40px;
+    width: 40px;
+  }
+
+  .menu-header-area {
+    display: flex;
+    width: 100%;
+  }
+
+  #menu-open-icon {
+    height: 40px;
+    margin: 10px;
+    width: 40px;
+  }
+
+  .menu-header-text {
+    color: #FFFFFF;
+    font: bolder 20px 'Open Sans';
+    margin: 16px;
+    padding-left: 95px;
   }
 
   .filter-starred-area {
     display: none;
+    border: none;
+    text-align: left;
   }
 
-  .menu-ideabox-header-text {
-    color: white;
-    font-family: 'Open Sans';
-    font-weight: bolder;
-    margin: 15px;
+  .idea-form {
+    flex-grow: 1;
+  }
+
+  .show-dropdown {
+    display: flex;
+  }
+
+  .opacity {
+    opacity: .6;
+    z-index: -1;
   }
 
   .ideas {
     display: flex;
     flex: 1;
     flex-direction: column;
-    width: 100%
+    width: 100%;
   }
 
   form {
     width: 100%;
   }
 
-  .header-ideabox-area {
-    background-image: url('assets/menu.svg') ;
-    background-repeat: no-repeat;
-  }
-
   .idea-form-section {
-    background: #A9AAD2;
     display: flex;
-    font-family: "Open Sans";
+    font-family: 'Open Sans';
     justify-content: center;
     padding: 20% 3% 7% 3%;
+    z-index: -1;
   }
-
 
   .idea-card-section {
     display: flex;
@@ -325,25 +299,24 @@ h3 {
     margin: 1%;
     padding: 1%;
     padding-top: 5%;
-
   }
 
   .idea-card-individual {
     color: #1F1F3D;
-    background: #FFFFFF;
-    border: 1px solid;
-    border-color: #6E646B;
+    background-color: #FFFFFF;
+    border: 1px solid #6E646B;
     display: flex;
     flex-direction: column;
-    font-family: "Open Sans";
     justify-content: space-between;
-    margin-bottom: 30px;
-    margin-left: 5px;
-    margin-right: 5px;
-    min-height: 200px;
+    margin: 10px 5px 20px;
     max-height: 250px;
-    min-width: 150px;
+    min-height: 200px;
     max-width: 400px;
+    min-width: 150px;
+  }
+
+  .comment-text {
+    margin-top: 2%; 
   }
 
 }
