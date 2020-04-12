@@ -3,29 +3,17 @@ var filterStarredArea = document.querySelector(".filter-starred-area");
 var ideaCardSection = document.querySelector(".idea-card-section");
 var inputForm = document.querySelector("form");
 var menuOpenIcon = document.querySelector("#menu-open-icon");
-
 var saveCardButton = document.querySelector(".save-card-button");
 var inputTitle = document.querySelector("#idea-title-text");
 var inputBody = document.querySelector("#idea-body-text");
-var cardTitle = document.querySelector(".idea-header-text");
-var cardBody = document.querySelector(".idea-card-text");
 var ideaCardSection = document.querySelector(".idea-card-section");
 
-
-
-var storedTitles = [];
-var storedBody = [];
-
 var savedCards = [];
-
-var newCard;
-
 
 menuButton.addEventListener("click", toggleDropDownMenu);
 saveCardButton.addEventListener("click", savedIdeaCard);
 inputTitle.addEventListener("keyup", enableSaveButton);
 inputBody.addEventListener("keyup", enableSaveButton);
-
 
 function toggleDropDownMenu() {
   filterStarredArea.classList.toggle("show-dropdown");
@@ -46,28 +34,16 @@ function enableSaveButton() {
   }
 }
 
-function makeNewCard(event) {
-  cardTitle.innerText = inputTitle.value;
-  cardBody.innerText = inputBody.value;
-  newCard = new Idea(inputTitle.value, inputBody.value);
-  storeCard();
-}
-
-function noDuplicateCards() {
+function makeNewCard() {
+  var newCard = new Idea(inputTitle.value, inputBody.value);
   for (var i = 0; i < savedCards.length; i++) {
-    if(savedCards[i].id === newCard.id) {
-      return false;
+    var card = savedCards[i];
+    if (card.title === newCard.title && card.body === newCard.body) {
+      alert("This idea already exists dumb ass!");
+      return
     }
   }
-  return true;
-}
-
-function storeCard() {
-  storedTitles.push(inputTitle.value);
-  storedBody.push(inputBody.value);
-  if(noDuplicateCard()) {
-    savedCards.push(newCard);
-  }
+  savedCards.push(newCard)
 }
 
 function clearText() {
@@ -79,35 +55,25 @@ function clearText() {
 function savedIdeaCard(event) {
   event.preventDefault();
   makeNewCard();
-  clearText();
+  clearText()
   addToCardSection();
 }
 
-function addToCardSection() {
-  if(savedCards.length != 0) {
-    for (var i = 0; i < savedCards.length; i++) {
-      ideaCardSection.insertAdjacentHTML("afterbegin", `
-      <div class="user-card" data-id=${savedCards[i].id}>
-      <h3>${savedCards[i].title}</h3>
-      <p>${savedCards[i].body}</p>
-      </div>`);
-    }
+function addToCardSection () {
+  ideaCardSection.innerHTML = "";
+  for (var i = 0; i < savedCards.length; i++) {
+  var cardTemplate = `<section class="idea-card-individual" ${savedCards[i].id}>
+      <header class="card-top">
+        <img class="red-star" src="assets/star-active.svg" alt="active-star">
+        <img class="white-x" src="assets/delete.svg" alt="delete">
+      </header>
+      <h3 class="idea-header-text">${savedCards[i].title}</h3>
+      <p class="idea-card-text">${savedCards[i].body}</P>
+      <footer class= "card-bottom">
+        <img class="comment-icon" src="assets/comment.svg" alt="comment">
+        <p class="comment-text"> Comment </p>
+      </footer>
+    </section>`;
+   ideaCardSection.insertAdjacentHTML("afterbegin", cardTemplate);
   }
 }
-
-
-
-      // function deleteCard(event) {
-        //   if (event.target.closest(".mini-poster")) {
-          //     var cardToDeleteHTML = event.target.closest(".mini-poster");
-          //     for (var i = 0; i < savedCards.length; i++) {
-            //       if (savedCards[i].id == cardToDeleteHTML.dataset.id) {
-              //         savedPosters.splice(savedCards[i], 1);
-              //         ideaCardSection.innerHTML = "";
-              //       }
-              //     }
-              //   }
-              // }
-
-//   ---no page reload!! localStorage?
-// That object should also be added to a list of all the ideas your application currently has.
