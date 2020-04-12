@@ -179,7 +179,7 @@ form {
   justify-content: space-between;
   margin: 15px 35px;
   max-height: 300px;
-  min-height: 200px;
+  min-height: 300px;
   max-width: 275px;
   min-width: 150px;
 }
@@ -223,7 +223,7 @@ form {
 }
 
 .comment-text {
-  margin: 6px -6px 10px;
+  margin: 13px 0px 10px;
 }
 
 @media only screen and (max-width: 400px) {
@@ -328,6 +328,20 @@ form {
     min-height: 200px;
     max-width: 400px;
     min-width: 350px;
+  }
+
+  .comment-text {
+    margin: 5px -3px 5px;
+  }
+
+  .comment-icon {
+    height: 110%;
+    width: 9%;
+  }
+
+  .red-star, .white-x {
+    height: 100%;
+    width: 9%;
   }
 
 }
