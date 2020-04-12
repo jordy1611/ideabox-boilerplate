@@ -8,12 +8,12 @@ Our team will utilize an agile workflow over two weekly sprints. We will use a c
 
 Deployed Pages Link: https://leighlars.github.io/ideabox-boilerplate/
 
-Derek Romero Gihub Link: https://github.com/dereklromero13
-Dustin LaDue Github Link: https://github.com/DustinLaDue
-Leigh Larson Github Link: https://github.com/leighlars
-Driver/navigator style collaboration.
-Text editor: Atom
-Project management tool: Github Projects
+* Derek Romero Gihub Link: https://github.com/dereklromero13
+* Dustin LaDue Github Link: https://github.com/DustinLaDue
+* Leigh Larson Github Link: https://github.com/leighlars
+* Driver/navigator style collaboration.
+* Text editor: Atom
+* Project management tool: https://github.com/leighlars/ideabox-boilerplate/projects
 
 Estimated schedule:
 * Iteration 0 completed: Tuesday pm
