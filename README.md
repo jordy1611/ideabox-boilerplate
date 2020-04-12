@@ -47,7 +47,7 @@ Full mobile layout with open navigation:
 
 ### Iteration 2
 
-4/11/2020:
+4/11-12/20: This is where we really started to get into our JavaScript as we were now able to display some functionality to our webpage as well as the mobile view. Our first process was to be able to type into both the title and input fields, clicking the save button and having our idea appear on the idea card section. We were able to create a function with an HTML template to produce new cards. We also needed the text input fields to clear after we created our idea which was implemented as well. Another part we had implemented with JS is when you hover over the save button, it should only be deemed clickable if both our title and body idea input forms are filled out. We also created a nice little addition that alerted you if you are trying to create the same idea twice. 
 
 Desktop layout:
 
