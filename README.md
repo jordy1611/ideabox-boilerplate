@@ -27,15 +27,15 @@ Estimated schedule:
 ## Progression
 
 ### Iteration 0 - Desktop Layout
-Day 1: Created repo, Github Project planner, Slack channel. Planned out HTML, CSS, JS using hand-drawn wireframes, identified/ labeled appropriate elements. Updated READMe to feature contact info, project overview, timeline. Added svg to created assets folder and created README imgs folder.
+4/6/2020: Created repo, Github Project planner, Slack channel. Planned out HTML, CSS, JS using hand-drawn wireframes, identified/ labeled appropriate elements. Updated READMe to feature contact info, project overview, timeline. Added svg to created assets folder and created README imgs folder.
 
-Day 2 and day 3: On these two days we really spent time making our code clear and concise. We had big breakthroughs with using flex-box and really honing in and understanding the usage of correct spacing. The svg icons were a bit tricky as it was our first time really working with them. But once we started to understand the process we were able to move quickly with all the other svg icons. We worked together as a team to review each code block to make sure we were all on the same page and had the same understanding on how all the code worked as a cohesive unit to build the layout of our webpage.
+4/7-8/2020: On these two days we really spent time making our code clear and concise. We had big breakthroughs with using flex-box and really honing in and understanding the usage of correct spacing. The svg icons were a bit tricky as it was our first time really working with them. But once we started to understand the process we were able to move quickly with all the other svg icons. We worked together as a team to review each code block to make sure we were all on the same page and had the same understanding on how all the code worked as a cohesive unit to build the layout of our webpage.
 
 
 ![screenshot of desktop layout]( https://files.slack.com/files-pri/T029P2S9M-F011QFU5R36/screen_shot_2020-04-08_at_8.45.29_pm.png)
 
 ### Iteration 1 - Mobile Layout
-Friday 4/10/20, we refactored our CSS and used media queries for responsive mobile layout, which included adding JS for a drop down menu.  We also collaborated with Mod 4 student Kim McCaskill to complete this iteration.   
+4/9-10/20: We refactored our CSS and used media queries for responsive mobile layout, which included adding JS for a drop down menu.  We also collaborated with Mod 4 student Kim McCaskill to complete this iteration.   
 
 Full mobile layout:
 
@@ -45,9 +45,22 @@ Full mobile layout with open navigation:
 
 ![Mobile Layout with Dropdown](/assets/it1-mobile-view-drop-menu.png)
 
-### Iteration 2 and beyond
+### Iteration 2
 
-After you have completed Iterations 0-1, your Project Manager will provide you with the next iteration.
+4/11/2020:
+
+Desktop layout:
+
+![Desktop layout with cards](/assets/it2-desktopview.png)
+
+Mobile layout with duplication prevention alert:
+
+![Mobile Layout with duplication alert](/assets/it2-mobileview.png)
+
+
+### Iteration 3
+
+
 
 ## Rubric
 

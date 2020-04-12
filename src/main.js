@@ -39,7 +39,7 @@ function makeNewCard() {
   for (var i = 0; i < savedCards.length; i++) {
     var card = savedCards[i];
     if (card.title === newCard.title && card.body === newCard.body) {
-      alert("This idea already exists dumb ass!");
+      alert("This idea already exists!");
       return
     }
   }

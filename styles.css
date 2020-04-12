@@ -188,7 +188,7 @@ form {
   background: #1F1F3D;
   display: flex;
   justify-content: space-between;
-  height: 12%;
+  height: 15%;
 }
 
 .red-star, .white-x {
@@ -214,7 +214,7 @@ form {
   display: flex;
   justify-content: flex-start;
   font: bold 16px 'Open Sans';
-  height: 13%;
+  height: 15%;
 }
 
 .comment-icon {
@@ -223,7 +223,7 @@ form {
 }
 
 .comment-text {
-  margin-top: 2.5%;
+  margin: 6px -6px 10px;
 }
 
 @media only screen and (max-width: 400px) {
@@ -235,6 +235,7 @@ form {
     height: 65px;
     text-align: center;
     width: 100%;
+    z-index: 3;
   }
 
   .menu-button {
@@ -252,15 +253,15 @@ form {
 
   #menu-open-icon {
     height: 40px;
-    margin: 10px;
-    width: 40px;
+    margin: 12px;
+    width: 60px;
   }
 
   .menu-header-text {
     color: #FFFFFF;
     font: bolder 20px 'Open Sans';
-    margin: 16px;
-    padding-left: 95px;
+    margin: 18px;
+    padding-left: 100px;
   }
 
   .filter-starred-area {
@@ -269,9 +270,14 @@ form {
     text-align: left;
   }
 
-  .idea-form {
-    flex-grow: 1;
+  .starred-ideas-button {
+    font: bold 20px 'Open Sans';
+    justify-content: center;
+    margin: 3px auto 30px;
+    padding: 10px 40px;
+    width: 90%;
   }
+
 
   .show-dropdown {
     display: flex;
@@ -295,10 +301,9 @@ form {
 
   .idea-form-section {
     display: flex;
-    font-family: 'Open Sans';
     justify-content: center;
     padding: 20% 3% 7% 3%;
-    z-index: -1;
+    z-index: 2;
   }
 
   .idea-card-section {
@@ -318,15 +323,11 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 10px 5px 20px;
+    margin: 10px auto 20px;
     max-height: 250px;
     min-height: 200px;
     max-width: 400px;
-    min-width: 150px;
-  }
-
-  .comment-text {
-    margin-top: 2%;
+    min-width: 350px;
   }
 
 }
