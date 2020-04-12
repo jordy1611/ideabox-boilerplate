@@ -13,7 +13,7 @@ Deployed Pages Link: https://leighlars.github.io/ideabox-boilerplate/
 * Leigh Larson Github Link: https://github.com/leighlars
 * Driver/navigator style collaboration.
 * Text editor: Atom
-* Project management tool: Github Projects
+* Project management tool: https://github.com/leighlars/ideabox-boilerplate/projects
 
 Estimated schedule:
 * Iteration 0 completed: Tuesday pm
