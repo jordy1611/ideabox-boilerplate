@@ -13,8 +13,8 @@ var ideaCardSection = document.querySelector(".idea-card-section");
 
 
 
-// var storedTitles = []; rename!!!
-// var storedBody = []; rename!!!
+var storedTitles = [];
+var storedBody = [];
 
 var savedCards = [];
 
@@ -26,8 +26,6 @@ saveCardButton.addEventListener("click", savedIdeaCard);
 inputTitle.addEventListener("keyup", enableSaveButton);
 inputBody.addEventListener("keyup", enableSaveButton);
 
-
-// saveCardButton.disabled = true;
 
 function toggleDropDownMenu() {
   filterStarredArea.classList.toggle("show-dropdown");
@@ -48,16 +46,12 @@ function enableSaveButton() {
   }
 }
 
-// function makeNewCard() {
-//   var newCard = new Idea(inputTitle.value, inputBody.value);
-//   for (var i = 0; i < savedCards.length; i++) {
-//     var card = savedCards[i];
-//     if (card.title === newCard.title && card.body === newCard.body) {
-//       return
-//     }
-//   }
-//   savedCards.push(newCard);
-// }
+function makeNewCard(event) {
+  cardTitle.innerText = inputTitle.value;
+  cardBody.innerText = inputBody.value;
+  newCard = new Idea(inputTitle.value, inputBody.value);
+  storeCard();
+}
 
 function noDuplicateCards() {
   for (var i = 0; i < savedCards.length; i++) {
@@ -67,11 +61,12 @@ function noDuplicateCards() {
   }
   return true;
 }
+
 function storeCard() {
-  title.push(inputTitle.value);
-  body.push(inputBody.value);
+  storedTitles.push(inputTitle.value);
+  storedBody.push(inputBody.value);
   if(noDuplicateCard()) {
-    savedIdeaCard.push(newCard);
+    savedCards.push(newCard);
   }
 }
 
@@ -83,7 +78,7 @@ function clearText() {
 
 function savedIdeaCard(event) {
   event.preventDefault();
-  storeCard();
+  makeNewCard();
   clearText();
   addToCardSection();
 }
@@ -114,6 +109,5 @@ function addToCardSection() {
               //   }
               // }
 
-//   if either input is empty, disable "save" button w lighter color and diff cursor than pointer when hover
 //   ---no page reload!! localStorage?
 // That object should also be added to a list of all the ideas your application currently has.
