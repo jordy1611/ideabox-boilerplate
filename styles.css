@@ -193,7 +193,15 @@ form {
 
 .red-star, .white-x {
   height: 100%;
-  width: 15%;
+  width: 100%;
+}
+
+.red-star-button, .delete-button {
+  background-color: #1F1F3D;
+  border: none;
+  display: flex;
+  height: 100%;
+  width: 20%;
 }
 
 .idea-header-text, .idea-card-text {
@@ -238,17 +246,17 @@ form {
     z-index: 3;
   }
 
+  .menu-header-area {
+    display: flex;
+    width: 100%;
+  }
+
   .menu-button {
     background-color: initial;
     border: none;
     display: initial;
     height: 40px;
     width: 40px;
-  }
-
-  .menu-header-area {
-    display: flex;
-    width: 100%;
   }
 
   #menu-open-icon {
@@ -277,7 +285,6 @@ form {
     padding: 10px 40px;
     width: 90%;
   }
-
 
   .show-dropdown {
     display: flex;
@@ -339,9 +346,5 @@ form {
     width: 9%;
   }
 
-  .red-star, .white-x {
-    height: 100%;
-    width: 9%;
-  }
 
 }
