@@ -7,6 +7,8 @@ var saveCardButton = document.querySelector(".save-card-button");
 var inputTitle = document.querySelector("#idea-title-text");
 var inputBody = document.querySelector("#idea-body-text");
 var ideaCardSection = document.querySelector(".idea-card-section");
+var deleteButton = document.querySelector(".delete-button");
+var redStarButton = document.querySelector(".red-star-button");
 
 var savedCards = [];
 
@@ -14,6 +16,8 @@ menuButton.addEventListener("click", toggleDropDownMenu);
 saveCardButton.addEventListener("click", savedIdeaCard);
 inputTitle.addEventListener("keyup", enableSaveButton);
 inputBody.addEventListener("keyup", enableSaveButton);
+deleteButton.addEventListener("click", deleteCard);
+redStarButton.addEventListener("click", faveCard)
 
 function toggleDropDownMenu() {
   filterStarredArea.classList.toggle("show-dropdown");
@@ -64,8 +68,8 @@ function addToCardSection () {
   for (var i = 0; i < savedCards.length; i++) {
   var cardTemplate = `<section class="idea-card-individual" ${savedCards[i].id}>
       <header class="card-top">
-        <img class="red-star" src="assets/star-active.svg" alt="active-star">
-        <img class="white-x" src="assets/delete.svg" alt="delete">
+      <button class="red-star-button"><img class="red-star" src="assets/star-active.svg" alt="active-star"></button>
+      <button class="delete-button"><img class="white-x" src="assets/delete.svg" alt="delete"></button>
       </header>
       <h3 class="idea-header-text">${savedCards[i].title}</h3>
       <p class="idea-card-text">${savedCards[i].body}</P>
@@ -77,3 +81,13 @@ function addToCardSection () {
    ideaCardSection.insertAdjacentHTML("afterbegin", cardTemplate);
   }
 }
+
+// function deleteCard(event) {
+//     var cardToDeleteHTML = event.target(".delete-button");
+//     for (var i = 0; i < savedCards.length; i++) {
+//       if (savedCards[i].id === cardToDeleteHTML.dataset.id) {
+//         savedCard.splice(savedCards[i], 1);
+//         ideaCardSection.innerHTML = "";
+//       }
+//     }
+// }
