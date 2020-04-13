@@ -191,17 +191,24 @@ form {
   height: 15%;
 }
 
-.red-star, .white-x {
+.red-star-icon, .delete-icon {
   height: 100%;
   width: 100%;
 }
 
-.red-star-button, .delete-button {
+.star-button, .delete-button {
   background-color: #1F1F3D;
   border: none;
   display: flex;
   height: 100%;
   width: 20%;
+}
+
+.star-button {
+  background-image: url("assets/star.svg");
+}
+.star-button-active {
+  background-image: url("assets/star-active.svg");
 }
 
 .idea-header-text, .idea-card-text {
@@ -345,6 +352,21 @@ form {
     height: 110%;
     width: 9%;
   }
+
+  .red-star-icon, .delete-icon {
+    height: 100%;
+    width: 100%;
+  }
+
+  .star-button, .delete-button {
+    background-color: #1F1F3D;
+    border: none;
+    display: flex;
+    height: 100%;
+    width: 9%;
+  }
+
+
 
 
 }
