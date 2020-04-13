@@ -87,7 +87,7 @@ form {
   width: 50%;
 }
 
-.idea-title-area, .idea-body-area {
+.input-title-area, .input-body-area {
   color: #1F1F3D;
   display: flex;
   flex-direction: column;
@@ -95,7 +95,7 @@ form {
   margin: 5px 0 15px;
 }
 
-#idea-title-text, #idea-body-text {
+#input-title-text, #input-body-text {
   border: 2px solid #5356A4;
   border-radius: 4px;
   color: #1F1F3D;
@@ -104,7 +104,7 @@ form {
   padding: 7px;
 }
 
-#idea-body-text {
+#input-body-text {
   height: 90px;
 }
 
@@ -178,10 +178,8 @@ form {
   font: 20px 'Open Sans';
   justify-content: space-between;
   margin: 15px 35px;
-  max-height: 300px;
-  min-height: 300px;
-  max-width: 275px;
-  min-width: 150px;
+  height: 300px;
+  width: 275px;
 }
 
 .card-top {
@@ -205,10 +203,12 @@ form {
 }
 
 .star-button {
-  background-image: url("assets/star.svg");
+  background-image: url('assets/star.svg');
+  background-repeat: no-repeat;
 }
 .star-button-active {
-  background-image: url("assets/star-active.svg");
+  background-image: url('assets/star-active.svg');
+  background-repeat: no-repeat;
 }
 
 .idea-header-text, .idea-card-text {
@@ -219,7 +219,7 @@ form {
   font-weight: lighter;
   display: flex;
   flex-wrap: wrap;
-  overflow: hidden;
+  overflow: scroll;
   text-overflow: ellipsis;
 }
 
@@ -293,13 +293,13 @@ form {
     width: 90%;
   }
 
-  .show-dropdown {
-    display: flex;
+  .overlay {
+    background-color: rgba(0,0,0,0.5);
+    height: 70vh;
   }
 
-  .opacity {
-    opacity: .6;
-    z-index: -1;
+  .show-dropdown {
+    display: flex;
   }
 
   .ideas {
@@ -366,7 +366,8 @@ form {
     width: 9%;
   }
 
-
-
+  .hidden {
+    display: none;
+  }
 
 }
