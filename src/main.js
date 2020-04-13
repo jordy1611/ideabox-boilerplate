@@ -6,9 +6,6 @@ var menuOpenIcon = document.querySelector("#menu-open-icon");
 var saveCardButton = document.querySelector(".save-card-button");
 var inputTitle = document.querySelector("#idea-title-text");
 var inputBody = document.querySelector("#idea-body-text");
-var ideaCardSection = document.querySelector(".idea-card-section");
-var deleteButton = document.querySelector(".delete-button");
-var redStarButton = document.querySelector(".red-star-button");
 
 var savedCards = [];
 
@@ -16,8 +13,8 @@ menuButton.addEventListener("click", toggleDropDownMenu);
 saveCardButton.addEventListener("click", savedIdeaCard);
 inputTitle.addEventListener("keyup", enableSaveButton);
 inputBody.addEventListener("keyup", enableSaveButton);
-deleteButton.addEventListener("click", deleteCard);
-redStarButton.addEventListener("click", faveCard)
+ideaCardSection.addEventListener("click", deleteCard);
+ideaCardSection.addEventListener("click", favoriteCard);
 
 function toggleDropDownMenu() {
   filterStarredArea.classList.toggle("show-dropdown");
@@ -33,9 +30,7 @@ function toggleDropDownMenu() {
 function enableSaveButton() {
   if (inputTitle.value && inputBody.value) {
   saveCardButton.disabled = false;
-  } else {
-  saveCardButton.disabled = true;
-  }
+ }
 }
 
 function makeNewCard() {
@@ -44,7 +39,7 @@ function makeNewCard() {
     var card = savedCards[i];
     if (card.title === newCard.title && card.body === newCard.body) {
       alert("This idea already exists!");
-      return
+      return;
     }
   }
   savedCards.push(newCard)
@@ -66,28 +61,32 @@ function savedIdeaCard(event) {
 function addToCardSection () {
   ideaCardSection.innerHTML = "";
   for (var i = 0; i < savedCards.length; i++) {
-  var cardTemplate = `<section class="idea-card-individual" ${savedCards[i].id}>
+  var cardTemplate = `<section class="idea-card-individual ${i}">
       <header class="card-top">
-      <button class="red-star-button"><img class="red-star" src="assets/star-active.svg" alt="active-star"></button>
-      <button class="delete-button"><img class="white-x" src="assets/delete.svg" alt="delete"></button>
+         <button class="star-button"></button>
+         <button class="delete-button"><img class="delete-icon ${i}" src="assets/delete.svg" alt="delete"></button>
       </header>
       <h3 class="idea-header-text">${savedCards[i].title}</h3>
       <p class="idea-card-text">${savedCards[i].body}</P>
       <footer class= "card-bottom">
-        <img class="comment-icon" src="assets/comment.svg" alt="comment">
-        <p class="comment-text"> Comment </p>
+         <img class="comment-icon" src="assets/comment.svg" alt="comment">
+         <p class="comment-text"> Comment </p>
       </footer>
     </section>`;
    ideaCardSection.insertAdjacentHTML("afterbegin", cardTemplate);
   }
 }
 
-// function deleteCard(event) {
-//     var cardToDeleteHTML = event.target(".delete-button");
-//     for (var i = 0; i < savedCards.length; i++) {
-//       if (savedCards[i].id === cardToDeleteHTML.dataset.id) {
-//         savedCard.splice(savedCards[i], 1);
-//         ideaCardSection.innerHTML = "";
-//       }
-//     }
-// }
+function deleteCard(event) {
+  if (event.target.classList[0] === "delete-icon") {
+    var index = event.target.classList[1]
+    savedCards.splice(index, 1);
+    addToCardSection();
+  }
+
+function favoriteCard(event) {
+  if (event.target.classList.contains("star-button")) {
+    event.target.classList.toggle("star-button-active");
+     }
+   }
+ }
