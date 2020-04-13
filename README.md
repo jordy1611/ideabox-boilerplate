@@ -32,7 +32,7 @@ Estimated schedule:
 4/7-8/2020: On these two days we really spent time making our code clear and concise. We had big breakthroughs with using flex-box and really honing in and understanding the usage of correct spacing. The svg icons were a bit tricky as it was our first time really working with them. But once we started to understand the process we were able to move quickly with all the other svg icons. We worked together as a team to review each code block to make sure we were all on the same page and had the same understanding on how all the code worked as a cohesive unit to build the layout of our webpage.
 
 
-![screenshot of desktop layout]( https://files.slack.com/files-pri/T029P2S9M-F011QFU5R36/screen_shot_2020-04-08_at_8.45.29_pm.png)
+![screenshot of desktop layout](/assets/it0-desktoplayout.png)
 
 ### Iteration 1 - Mobile Layout
 4/9-10/20: We refactored our CSS and used media queries for responsive mobile layout, which included adding JS for a drop down menu.  We also collaborated with Mod 4 student Kim McCaskill to complete this iteration.   
@@ -47,7 +47,7 @@ Full mobile layout with open navigation:
 
 ### Iteration 2
 
-4/11-12/20: This is where we really started to get into our JavaScript as we were now able to display some functionality to our webpage as well as the mobile view. Our first process was to be able to type into both the title and input fields, clicking the save button and having our idea appear on the idea card section. We were able to create a function with an HTML template to produce new cards. We also needed the text input fields to clear after we created our idea which was implemented as well. Another part we had implemented with JS is when you hover over the save button, it should only be deemed clickable if both our title and body idea input forms are filled out. We also created a nice little addition that alerted you if you are trying to create the same idea twice. 
+4/11-12/20: This is where we really started to get into our JavaScript as we were now able to display some functionality to our webpage as well as the mobile view. Our first process was to be able to type into both the title and input fields, clicking the save button and having our idea appear on the idea card section. We were able to create a function with an HTML template to produce new cards. We also needed the text input fields to clear after we created our idea which was implemented as well. Another part we had implemented with JS is when you hover over the save button, it should only be deemed clickable if both our title and body idea input forms are filled out. We also created a nice little addition that alerted you if you are trying to create the same idea twice.
 
 Desktop layout:
 
@@ -60,6 +60,7 @@ Mobile layout with duplication prevention alert:
 
 ### Iteration 3
 
+4/12/20  We completed functionality for delete and favorite buttons.  Mod4 student Grayson Palmer reviewed our code for SRP / DRY opportunities.  We also made the opacity / overlay visible in the mobile view.
 
 
 ## Rubric
