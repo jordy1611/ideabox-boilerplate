@@ -4,22 +4,21 @@ var ideaCardSection = document.querySelector(".idea-card-section");
 var inputForm = document.querySelector("form");
 var menuOpenIcon = document.querySelector("#menu-open-icon");
 var saveCardButton = document.querySelector(".save-card-button");
-var inputTitle = document.querySelector("#idea-title-text");
-var inputBody = document.querySelector("#idea-body-text");
+var inputTitle = document.querySelector("#input-title-text");
+var inputBody = document.querySelector("#input-body-text");
+var overlay = document.querySelector(".overlay");
 
 var savedCards = [];
 
 menuButton.addEventListener("click", toggleDropDownMenu);
-saveCardButton.addEventListener("click", savedIdeaCard);
+saveCardButton.addEventListener("click", savedIdeaCardHandler);
 inputTitle.addEventListener("keyup", enableSaveButton);
 inputBody.addEventListener("keyup", enableSaveButton);
-ideaCardSection.addEventListener("click", deleteCard);
-ideaCardSection.addEventListener("click", favoriteCard);
+ideaCardSection.addEventListener("click", clickCardHandler);
 
 function toggleDropDownMenu() {
   filterStarredArea.classList.toggle("show-dropdown");
-  ideaCardSection.classList.toggle("opacity");
-  inputForm.classList.toggle("opacity");
+  overlay.classList.toggle("hidden");
   if (filterStarredArea.classList.contains("show-dropdown")) {
     menuOpenIcon.src = "assets/menu-close.svg";
   } else {
@@ -30,7 +29,7 @@ function toggleDropDownMenu() {
 function enableSaveButton() {
   if (inputTitle.value && inputBody.value) {
   saveCardButton.disabled = false;
- }
+  }
 }
 
 function makeNewCard() {
@@ -42,7 +41,7 @@ function makeNewCard() {
       return;
     }
   }
-  savedCards.push(newCard)
+  savedCards.push(newCard);
 }
 
 function clearText() {
@@ -51,17 +50,18 @@ function clearText() {
   saveCardButton.disabled = true;
 }
 
-function savedIdeaCard(event) {
+function savedIdeaCardHandler(event) {
   event.preventDefault();
   makeNewCard();
-  clearText()
+  clearText();
   addToCardSection();
 }
 
 function addToCardSection () {
   ideaCardSection.innerHTML = "";
   for (var i = 0; i < savedCards.length; i++) {
-  var cardTemplate = `<section class="idea-card-individual ${i}">
+  var cardTemplate =
+    `<section class="idea-card-individual ${i}">
       <header class="card-top">
          <button class="star-button"></button>
          <button class="delete-button"><img class="delete-icon ${i}" src="assets/delete.svg" alt="delete"></button>
@@ -77,16 +77,13 @@ function addToCardSection () {
   }
 }
 
-function deleteCard(event) {
-  if (event.target.classList[0] === "delete-icon") {
-    var index = event.target.classList[1]
+function clickCardHandler(event) {
+  if (event.target.classList.contains("delete-icon")) {
+    var index = event.target.classList[1];
     savedCards.splice(index, 1);
     addToCardSection();
-  }
-
-function favoriteCard(event) {
+    }
   if (event.target.classList.contains("star-button")) {
-    event.target.classList.toggle("star-button-active");
-     }
-   }
- }
+      event.target.classList.toggle("star-button-active");
+    }
+  }
