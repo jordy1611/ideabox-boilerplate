@@ -8,16 +8,16 @@ var inputTitle = document.querySelector("#input-title-text");
 var inputBody = document.querySelector("#input-body-text");
 var overlay = document.querySelector(".overlay");
 var savedCards = [];
-​
-​
+
+
 window.onload = retrieveCardsFromStorage();
 menuButton.addEventListener("click", toggleDropDownMenu);
 saveCardButton.addEventListener("click", savedIdeaCardHandler);
 inputTitle.addEventListener("keyup", enableSaveButton);
 inputBody.addEventListener("keyup", enableSaveButton);
 ideaCardSection.addEventListener("click", clickCardHandler);
-​
-​
+
+
 function toggleDropDownMenu() {
   filterStarredArea.classList.toggle("show-dropdown");
   overlay.classList.toggle("hidden");
@@ -52,28 +52,28 @@ function clearText() {
   inputBody.value = "";
   saveCardButton.disabled = true;
 }
-​
+
 function addToCardSection () {
   ideaCardSection.innerHTML = "";
   for (var i = 0; i < savedCards.length; i++) {
     var buttonPress = savedCards[i].star ? "star-button-active" : "star-button";
     var cardTemplate =
-    `<section class="idea-card-individual">
-    <header class="card-top">
-    <button class=${buttonPress} id="${i}"></button>
-    <button class="delete-button"><img class="delete-icon ${i}" src="assets/delete.svg" alt="delete"></button>
-    </header>
-    <h3 class="idea-header-text">${savedCards[i].title}</h3>
-    <p class="idea-card-text">${savedCards[i].body}</P>
-    <footer class= "card-bottom">
-    <img class="comment-icon" src="assets/comment.svg" alt="comment">
-    <p class="comment-text"> Comment </p>
-    </footer>
-    </section>`;
+      `<section class="idea-card-individual">
+      <header class="card-top">
+      <button class=${buttonPress} id="${i}"></button>
+      <button class="delete-button"><img class="delete-icon ${i}" src="assets/delete.svg" alt="delete"></button>
+      </header>
+      <h3 class="idea-header-text">${savedCards[i].title}</h3>
+      <p class="idea-card-text">${savedCards[i].body}</P>
+      <footer class= "card-bottom">
+      <img class="comment-icon" src="assets/comment.svg" alt="comment">
+      <p class="comment-text"> Comment </p>
+      </footer>
+      </section>`;
     ideaCardSection.insertAdjacentHTML("afterbegin", cardTemplate);
   }
 }
-​
+
 function savedIdeaCardHandler(event) {
   event.preventDefault();
   makeNewCard();
@@ -82,11 +82,11 @@ function savedIdeaCardHandler(event) {
 }
 ​
 function deleteCard(event) {
-    var index = event.target.classList[1];
-    var removedCard = savedCards.splice(index, 1)[0];
-    removedCard.deleteFromStorage(removedCard.id);
-  }
-​
+  var index = event.target.classList[1];
+  var removedCard = savedCards.splice(index, 1)[0];
+  removedCard.deleteFromStorage(removedCard.id);
+}
+
 function favoriteCard(event) {
   event.target.classList.toggle("star-button-active")
   event.target.classList.toggle("star-button");
@@ -105,12 +105,12 @@ function clickCardHandler(event) {
     event.target.classList.contains("star-button-active")) {
     favoriteCard(event);
     }
-  }
-​
- function retrieveCardsFromStorage() {
+}
+
+function retrieveCardsFromStorage() {
   savedCards = JSON.parse(localStorage.getItem("savedCardsToStorage")) || [];
   for (var i = 0; i < savedCards.length; i++) {
      savedCards[i] = new Idea(savedCards[i].title, savedCards[i].body, savedCards[i].star, savedCards[i].id)
   }
   addToCardSection();
- 
+}
