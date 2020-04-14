@@ -9,7 +9,6 @@ var inputBody = document.querySelector("#input-body-text");
 var overlay = document.querySelector(".overlay");
 var savedCards = [];
 
-
 window.onload = retrieveCardsFromStorage();
 menuButton.addEventListener("click", toggleDropDownMenu);
 saveCardButton.addEventListener("click", savedIdeaCardHandler);
@@ -27,13 +26,13 @@ function toggleDropDownMenu() {
     menuOpenIcon.src = "assets/menu.svg";
   }
 }
-​
+
 function enableSaveButton() {
   if (inputTitle.value && inputBody.value) {
   saveCardButton.disabled = false;
   }
 }
-​
+
 function makeNewCard() {
   var newCard = new Idea(inputTitle.value, inputBody.value);
   for (var i = 0; i < savedCards.length; i++) {
@@ -46,7 +45,7 @@ function makeNewCard() {
   savedCards.push(newCard);
   newCard.saveToStorage(savedCards);
 }
-​
+
 function clearText() {
   inputTitle.value = "";
   inputBody.value = "";
@@ -80,7 +79,7 @@ function savedIdeaCardHandler(event) {
   clearText();
   addToCardSection();
 }
-​
+
 function deleteCard(event) {
   var index = event.target.classList[1];
   var removedCard = savedCards.splice(index, 1)[0];
@@ -94,7 +93,7 @@ function favoriteCard(event) {
   savedCards[id].star = !savedCards[id].star;
   savedCards[id].updateIdea(savedCards[id].id);
 }
-​
+
 function clickCardHandler(event) {
   event.preventDefault();
   if (event.target.classList.contains("delete-icon")) {
@@ -104,7 +103,7 @@ function clickCardHandler(event) {
   if (event.target.classList.contains("star-button") ||
     event.target.classList.contains("star-button-active")) {
     favoriteCard(event);
-    }
+  }
 }
 
 function retrieveCardsFromStorage() {

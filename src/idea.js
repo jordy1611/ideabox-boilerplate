@@ -9,11 +9,7 @@ class Idea {
   saveToStorage(savedCards) {
     localStorage.setItem("savedCardsToStorage", JSON.stringify(savedCards));
   }
-​
-  saveToStorage(savedCards) {
-    localStorage.setItem("savedCardsToStorage", JSON.stringify(savedCards));
-  }
-​
+
   deleteFromStorage(id) {
     var savedCardsFromStorage = JSON.parse(localStorage.getItem("savedCardsToStorage"));
     var filteredCards = savedCardsFromStorage.filter(function(idea) {
