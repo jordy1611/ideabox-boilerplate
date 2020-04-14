@@ -194,7 +194,7 @@ form {
   width: 100%;
 }
 
-.star-button, .delete-button {
+.star-button, .delete-button, .star-button-active {
   background-color: #1F1F3D;
   border: none;
   display: flex;
