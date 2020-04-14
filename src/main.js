@@ -66,7 +66,7 @@ function addToCardSection () {
       <p class="idea-card-text">${savedCards[i].body}</P>
       <footer class= "card-bottom">
       <img class="comment-icon" src="assets/comment.svg" alt="comment">
-      <p class="comment-text"> Comment </p>
+      <p class="comment-text">Comment</p>
       </footer>
       </section>`;
     ideaCardSection.insertAdjacentHTML("afterbegin", cardTemplate);
@@ -87,7 +87,7 @@ function deleteCard(event) {
 }
 
 function favoriteCard(event) {
-  event.target.classList.toggle("star-button-active")
+  event.target.classList.toggle("star-button-active");
   event.target.classList.toggle("star-button");
   var id = parseInt(event.target.id);
   savedCards[id].star = !savedCards[id].star;
@@ -109,7 +109,7 @@ function clickCardHandler(event) {
 function retrieveCardsFromStorage() {
   savedCards = JSON.parse(localStorage.getItem("savedCardsToStorage")) || [];
   for (var i = 0; i < savedCards.length; i++) {
-     savedCards[i] = new Idea(savedCards[i].title, savedCards[i].body, savedCards[i].star, savedCards[i].id)
+     savedCards[i] = new Idea(savedCards[i].title, savedCards[i].body, savedCards[i].star, savedCards[i].id);
   }
   addToCardSection();
 }

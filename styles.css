@@ -346,7 +346,7 @@ form {
   }
 
   .comment-text {
-    margin: 5px -3px 5px;
+    margin: 9px -3px 5px;
   }
 
   .comment-icon {
@@ -364,7 +364,7 @@ form {
     border: none;
     display: flex;
     height: 100%;
-    width: 9%;
+    width: 11%;
   }
 
   .hidden {
