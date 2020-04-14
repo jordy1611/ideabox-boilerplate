@@ -58,18 +58,18 @@ function addToCardSection () {
   for (var i = 0; i < savedCards.length; i++) {
     var buttonPress = savedCards[i].star ? "star-button-active" : "star-button";
     var cardTemplate =
-    `<section class="idea-card-individual">
-    <header class="card-top">
-    <button class=${buttonPress} id="${i}"></button>
-    <button class="delete-button"><img class="delete-icon ${i}" src="assets/delete.svg" alt="delete"></button>
-    </header>
-    <h3 class="idea-header-text">${savedCards[i].title}</h3>
-    <p class="idea-card-text">${savedCards[i].body}</P>
-    <footer class= "card-bottom">
-    <img class="comment-icon" src="assets/comment.svg" alt="comment">
-    <p class="comment-text"> Comment </p>
-    </footer>
-    </section>`;
+      `<section class="idea-card-individual">
+      <header class="card-top">
+      <button class=${buttonPress} id="${i}"></button>
+      <button class="delete-button"><img class="delete-icon ${i}" src="assets/delete.svg" alt="delete"></button>
+      </header>
+      <h3 class="idea-header-text">${savedCards[i].title}</h3>
+      <p class="idea-card-text">${savedCards[i].body}</P>
+      <footer class= "card-bottom">
+      <img class="comment-icon" src="assets/comment.svg" alt="comment">
+      <p class="comment-text"> Comment </p>
+      </footer>
+      </section>`;
     ideaCardSection.insertAdjacentHTML("afterbegin", cardTemplate);
   }
 }
@@ -82,9 +82,9 @@ function savedIdeaCardHandler(event) {
 }
 ​
 function deleteCard(event) {
-    var index = event.target.classList[1];
-    var removedCard = savedCards.splice(index, 1)[0];
-    removedCard.deleteFromStorage(removedCard.id);
+  var index = event.target.classList[1];
+  var removedCard = savedCards.splice(index, 1)[0];
+  removedCard.deleteFromStorage(removedCard.id);
 }
 
 function favoriteCard(event) {
