@@ -140,7 +140,7 @@ form {
   width: 100%;
 }
 
-#search-mag-icon {
+#search-icon {
   background-color: #1F1F3D;
   border-radius: 2px 0 0 2px;
   height: 100%;
@@ -199,6 +199,7 @@ form {
   border: none;
   display: flex;
   height: 100%;
+  outline: none;
   width: 20%;
 }
 
@@ -264,6 +265,7 @@ form {
     border: none;
     display: initial;
     height: 40px;
+    outline: none;
     width: 40px;
   }
 
@@ -364,6 +366,7 @@ form {
     border: none;
     display: flex;
     height: 100%;
+    outline: none;
     width: 11%;
   }
 

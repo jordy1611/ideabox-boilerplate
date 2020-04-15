@@ -14,7 +14,7 @@ class Idea {
     var savedCardsFromStorage = JSON.parse(localStorage.getItem("savedCardsToStorage"));
     var filteredCards = savedCardsFromStorage.filter(function(idea) {
       return idea.id != id;
-    })
+    });
     localStorage.setItem("savedCardsToStorage", JSON.stringify(filteredCards));
   }
 
@@ -25,7 +25,6 @@ class Idea {
       item.star = !item.star;
       }
     });
-  localStorage.setItem("savedCardsToStorage", JSON.stringify(savedCardsFromStorage));
+    localStorage.setItem("savedCardsToStorage", JSON.stringify(savedCardsFromStorage));
   }
-
 }
