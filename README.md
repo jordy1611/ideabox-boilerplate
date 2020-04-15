@@ -32,18 +32,18 @@ Estimated schedule:
 4/7-8/2020: On these two days we really spent time making our code clear and concise. We had big breakthroughs with using flex-box and really honing in and understanding the usage of correct spacing. The svg icons were a bit tricky as it was our first time really working with them. But once we started to understand the process we were able to move quickly with all the other svg icons. We worked together as a team to review each code block to make sure we were all on the same page and had the same understanding on how all the code worked as a cohesive unit to build the layout of our webpage.
 
 
-![screenshot of desktop layout](/assets/it0-desktop-layout.png)
+Screenshot of desktop layout: https://github.com/leighlars/ideabox-boilerplate/blob/master/readme-imgs/it0-desktoplayout.png
 
 ### Iteration 1 - Mobile Layout
 4/9-10/20: We refactored our CSS and used media queries for responsive mobile layout, which included adding JS for a drop down menu.  We also collaborated with Mod 4 student Kim McCaskill to complete this iteration.   
 
 Full mobile layout:
 
-![Mobile Layout](/assets/it1-MobileView.png)
+Mobile Layout: https://github.com/leighlars/ideabox-boilerplate/blob/master/readme-imgs/It1-MobileView.png
 
 Full mobile layout with open navigation:
 
-![Mobile Layout with Dropdown](/assets/it1-MobileViewDropMenu.png)
+Mobile Layout with Dropdown: https://github.com/leighlars/ideabox-boilerplate/blob/master/readme-imgs/It1-MobileViewDropMenu.png
 
 ### Iteration 2
 
@@ -51,11 +51,11 @@ Full mobile layout with open navigation:
 
 Desktop layout:
 
-![Desktop layout with cards](/assets/it2-desktopview.png)
+Desktop layout with cards: https://github.com/leighlars/ideabox-boilerplate/blob/master/readme-imgs/it2-desktopview.png
 
 Mobile layout with duplication prevention alert:
 
-![Mobile Layout with duplication alert](/assets/it2-mobileview.png)
+Mobile Layout with duplication alert: https://github.com/leighlars/ideabox-boilerplate/blob/master/readme-imgs/it2-mobileview.png
 
 
 ### Iteration 3
