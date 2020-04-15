@@ -32,7 +32,7 @@ Estimated schedule:
 4/7-8/2020: On these two days we really spent time making our code clear and concise. We had big breakthroughs with using flex-box and really honing in and understanding the usage of correct spacing. The svg icons were a bit tricky as it was our first time really working with them. But once we started to understand the process we were able to move quickly with all the other svg icons. We worked together as a team to review each code block to make sure we were all on the same page and had the same understanding on how all the code worked as a cohesive unit to build the layout of our webpage.
 
 
-![screenshot of desktop layout](/assets/it0-desktop-layout.png)
+![screenshot of desktop layout](/assets/it0-desktop-layout.png) https://github.com/leighlars/ideabox-boilerplate/blob/master/readme-imgs/It1-MobileView.png
 
 ### Iteration 1 - Mobile Layout
 4/9-10/20: We refactored our CSS and used media queries for responsive mobile layout, which included adding JS for a drop down menu.  We also collaborated with Mod 4 student Kim McCaskill to complete this iteration.   
