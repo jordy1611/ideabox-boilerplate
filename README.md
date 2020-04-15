@@ -39,11 +39,11 @@ Estimated schedule:
 
 Full mobile layout:
 
-![Mobile Layout](/assets/it1-mobile-view.png)
+![Mobile Layout](/assets/it1-MobileView.png)
 
 Full mobile layout with open navigation:
 
-![Mobile Layout with Dropdown](/assets/it1-mobile-view-drop-menu.png)
+![Mobile Layout with Dropdown](/assets/it1-MobileViewDropMenu.png)
 
 ### Iteration 2
 
@@ -62,6 +62,9 @@ Mobile layout with duplication prevention alert:
 
 4/12/20  We completed functionality for delete and favorite buttons.  Mod4 student Grayson Palmer reviewed our code for SRP / DRY opportunities.  We also made the opacity / overlay visible in the mobile view.
 
+### Iteration 4
+
+4/15/20 We completed up to bullet point 3 of Iteration 4.  This includes: when the page is refreshed, the idea card remains in the idea list; when two cards are created and one is deleted, one idea card remains after refresh; and finally, when an idea card is favorited and the page is refreshed, that card is still in the "favorite" state with the filled in star icon.  We reviewed entire code with Mod4 and Mod2 students Grayson Palmer and Elliot Mackinnon.  We also spent a significant amount of time refactoring our code by reducing lines of code, removing white spacing and type-Os.   
 
 ## Rubric
 

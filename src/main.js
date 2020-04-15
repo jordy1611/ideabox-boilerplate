@@ -14,7 +14,7 @@ menuButton.addEventListener("click", toggleDropDownMenu);
 saveCardButton.addEventListener("click", savedIdeaCardHandler);
 inputTitle.addEventListener("keyup", enableSaveButton);
 inputBody.addEventListener("keyup", enableSaveButton);
-ideaCardSection.addEventListener("click", clickCardHandler);
+ideaCardSection.addEventListener("click", cardTopHandler);
 
 
 function toggleDropDownMenu() {
@@ -52,7 +52,7 @@ function clearText() {
   saveCardButton.disabled = true;
 }
 
-function addToCardSection () {
+function displayCards() {
   ideaCardSection.innerHTML = "";
   for (var i = 0; i < savedCards.length; i++) {
     var buttonPress = savedCards[i].star ? "star-button-active" : "star-button";
@@ -63,8 +63,8 @@ function addToCardSection () {
       <button class="delete-button"><img class="delete-icon ${i}" src="assets/delete.svg" alt="delete"></button>
       </header>
       <h3 class="idea-header-text">${savedCards[i].title}</h3>
-      <p class="idea-card-text">${savedCards[i].body}</P>
-      <footer class= "card-bottom">
+      <p class="idea-card-text">${savedCards[i].body}</p>
+      <footer class="card-bottom">
       <img class="comment-icon" src="assets/comment.svg" alt="comment">
       <p class="comment-text">Comment</p>
       </footer>
@@ -77,7 +77,7 @@ function savedIdeaCardHandler(event) {
   event.preventDefault();
   makeNewCard();
   clearText();
-  addToCardSection();
+  displayCards();
 }
 
 function deleteCard(event) {
@@ -94,11 +94,11 @@ function favoriteCard(event) {
   savedCards[id].updateIdea(savedCards[id].id);
 }
 
-function clickCardHandler(event) {
+function cardTopHandler(event) {
   event.preventDefault();
   if (event.target.classList.contains("delete-icon")) {
     deleteCard(event);
-    addToCardSection();
+    displayCards();
   }
   if (event.target.classList.contains("star-button") ||
     event.target.classList.contains("star-button-active")) {
@@ -109,7 +109,7 @@ function clickCardHandler(event) {
 function retrieveCardsFromStorage() {
   savedCards = JSON.parse(localStorage.getItem("savedCardsToStorage")) || [];
   for (var i = 0; i < savedCards.length; i++) {
-     savedCards[i] = new Idea(savedCards[i].title, savedCards[i].body, savedCards[i].star, savedCards[i].id);
+    savedCards[i] = new Idea(savedCards[i].title, savedCards[i].body, savedCards[i].star, savedCards[i].id);
   }
-  addToCardSection();
+  displayCards();
 }
